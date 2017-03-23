@@ -5,7 +5,9 @@
     "noImplicitAny": true,
     "module": "commonjs",
     "target": "es5",
-    "lib": ["es6"],
+    "lib": [
+      "dom", "es5", "es6", "es7"
+    ],
     "jsx": "react"
   },
   "include": [
