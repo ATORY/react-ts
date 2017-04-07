@@ -1,4 +1,4 @@
-/*
+
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import App from './AppDemo';
@@ -7,11 +7,11 @@ ReactDOM.render(
   <App />,
   document.getElementById('app')
 );
-*/
+
 
 
 // react react-router redux
-
+/*
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 
@@ -69,8 +69,8 @@ ReactDOM.render(
         <Route path='/topics' component={Topics} />
       </div>
     </Router>
-     */}
-    { /* ConnectedRouter will use the store from Provider automatically */ }
+     
+    { /* ConnectedRouter will use the store from Provider automatically 
     <ConnectedRouter history={history}>
       <div>
         <ul>
@@ -86,3 +86,4 @@ ReactDOM.render(
   </Provider>,
   document.getElementById('app')
 );
+*/

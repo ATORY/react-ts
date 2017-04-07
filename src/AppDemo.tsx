@@ -9,7 +9,7 @@ import {
 } from 'react-router-dom';
 
 // BasicExample
-/*
+
 class Home extends React.Component<{}, {}> {
   render() {
     return (
@@ -74,15 +74,27 @@ class Topic extends React.Component<RouteComponentProps<{ topicId: string }>, {}
   }
 }
 
+const OldSchoolMenuLink = ({ label, to, activeOnlyWhenExact }) => (
+  <Route path={to} exact={activeOnlyWhenExact} children={({ match }) => (
+    <div className={match ? 'active' : ''}>
+      {match ? '> ' : ''}<Link to={to}>{label}</Link>
+    </div>
+  )}/>
+)
+
+
 class BasicExample extends React.Component<{}, {}> {
   render() {
     return (
       <Router>
         <div>
           <ul>
-            <li><Link to="/">Home</Link></li>
+            <OldSchoolMenuLink activeOnlyWhenExact={true} to="/" label="Home"/>
+            <OldSchoolMenuLink to="/about" label="About"/>
+            <OldSchoolMenuLink to="/topics" label="Topics"/>
+            {/*<li><Link to="/">Home</Link></li>
             <li><Link to="/about">About</Link></li>
-            <li><Link to="/topics">Topics</Link></li>
+            <li><Link to="/topics">Topics</Link></li>*/}
           </ul>
 
           <hr />
@@ -95,7 +107,7 @@ class BasicExample extends React.Component<{}, {}> {
     )
   }
 }
-*/
+export default BasicExample;
 
 // URL ParamsExample
 /*
@@ -771,6 +783,7 @@ export default RouteConfigExample;
 
 
 // Modal Gallery
+/*
 import { PartialRouteComponentProps } from 'react-router-dom';
 class ModalSwitch extends React.Component<PartialRouteComponentProps<{}>, {}> {
 
@@ -987,7 +1000,7 @@ const Modal = ({ match, history }) => {
   )
 }
 */
-
+/*
 const ModalGallery = () => (
   <Router>
     <Route component={ModalSwitch} />
@@ -995,3 +1008,4 @@ const ModalGallery = () => (
 );
 
 export default ModalGallery;
+*/
